@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tast4</title>
+	<style>
+		#list {margin:40px 0 0 20px; width: 1000px;height: 100px;}
+		#list li {background: red;display:inline-block;vertical-align: bottom;margin: 0 5px;
+			width: 50px; font-size: 10px;}
+	</style>
+</head>
+<body>
+	<div id="div1">
+		<input id="text" type="text">
+		<input id="leftin" type="button" value="左侧入">
+		<input id="rightin" type="button" value="右侧入">
+		<input id="leftout" type="button" value="左侧出">
+		<input id="rightout" type="button" value="右侧出">
+		<input id="sort" type="button" value="排序">
+		 <ul id="list"></ul>
+	</div>
+<script>
+	var oText=document.getElementById('text');
+	var oLeftin=document.getElementById('leftin');
+	var oRightin=document.getElementById('rightin');
+	var oLeftout=document.getElementById('leftout');
+	var oRightout=document.getElementById('rightout');
+	var oUl=document.getElementById('list');
+	var oSort=document.getElementById('sort');
+
+	var arr3=[34,45,23,3999,1,3]
+
+	var arr=[];
+
+	var go=true;
+
+	//判断是不是10~100的数字
+	function isnum(){
+		if(!isNaN(oText.value)&&oText.value>=10&&oText.value<=100){
+			return true;
+
+		}else{
+			alert("请输入10~100的数字");
+			oText.value='';
+			oText.focus();
+			return false;
+		}
+	} 
+	//冒泡排序
+	function bubbleSort(arr){
+		for(var i=0;i<arr.length;i++){
+			for(var j=0;j<arr.length;j++){
+				if(arr[i]<arr[j]){
+					var d=arr[j];
+					arr[j]=arr[i];
+					arr[i]=d;
+				}
+			}
+		}
+		return arr;
+	}
+	//冒泡排序2
+	// function sort2(arr){
+	// 	for(var i=0;i<arr.length;i++){
+	// 		for(var j=0;j<arr.length-1-i;j++){
+	// 			if(arr[j]<arr[j+1]){
+	// 				var d=arr[j+1];
+	// 				arr[j+1]=arr[j];
+	// 				arr[j]=d;
+	// 			}
+	// 		}
+	// 	}
+	// 	return arr;
+	// }
+	//alert(sort2(arr3));
+	//添加li元素
+	function addelement(direction){
+		var oLi=document.createElement('li');
+			oLi.innerHTML=oText.value;
+			arr.push()
+			oLi.style.height=oText.value+"px";
+			if(direction=='left'){
+				if(oUl.children[0]){
+					oUl.insertBefore(oLi,oUl.children[0]);
+					oText.value='';
+					oText.focus();
+				}else{
+					oUl.appendChild(oLi);
+					oText.value='';
+					oText.focus();
+				}
+			}else if(direction=="right"){
+				oUl.appendChild(oLi);
+				oText.value='';
+				oText.focus();
+			}
+			if(oUl.children.length>10){
+				go=false;
+			}
+			
+	}
+
+	//判断添加li的数量
+	function limit(direction){
+		if(go){
+			if(isnum()){
+				addelement(direction);
+			}
+		}else{
+			alert("数量超出限制")
+		}
+	}
+
+	oSort.addEventListener("click",function(){
+		var aLi2=document.getElementsByTagName("li");
+		var aHeight=[];
+		for(var i=0;i<aLi2.length;i++){
+			aHeight=aLi2[i].style.height;
+		}
+	})
+
+	oLeftin.onclick = function(){
+		limit("left");
+	} 
+	oRightin.onclick = function (){
+		limit("right");
+	}
+
+	oLeftout.onclick=function(){
+		alert("删除数字"+oUl.firstChild.innerHTML+"?")
+		oUl.removeChild(oUl.firstChild);
+	}
+
+	oRightout.onclick=function(){
+		alert("删除数字"+oUl.lastChild.innerHTML+"?")
+		oUl.removeChild(oUl.lastChild);
+	}
+	oSort.onclick=function(){
+		alert(oUl.children[1]);
+		alert(oUl.children.length);
+		for(var i=0;i<oUl.children.length;i++){
+			for(var j=0;j<oUl.children.length-i-1;j++){
+				if(oUl.children[j].style.height>oUl.children[j+1].style.height){
+					var dd=oUl.children[j+1].style.height;
+					var val=oUl.children[j+1].innerHTML;
+
+					oUl.children[j+1].style.height=oUl.children[j].style.height;
+					oUl.children[j+1].innerHTML=oUl.children[j].innerHTML;
+
+					oUl.children[j].style.height=dd;
+					oUl.children[j].innerHTML=val
+				}
+			}
+		}
+	}
+</script>
+</body>
+</html>

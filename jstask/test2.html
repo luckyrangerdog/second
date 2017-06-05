@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test2</title>
+	<style>
+		li {width: 20px;display: inline-block; background: red;}
+	</style>
+	<script>
+		window.onload=function(){
+			var arr=[1,9,2,10,6];
+			b=arr.sort(function(a,b){
+				return a-b;
+			});
+			alert(typeof(b));
+		}
+	</script>
+</head>
+<body>
+	<ul>
+		<li style="height:20px;"></li>
+		<li style="height:10px;"></li>
+		<li style="height:50px;"></li>
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+</html>
