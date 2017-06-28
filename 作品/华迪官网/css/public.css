@@ -1,0 +1,101 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; } 
+body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; } 
+address, cite, dfn, em, var { font-style:normal; } 
+code, kbd, pre, samp { font-family:couriernew, courier, monospace; } 
+small{ font-size:12px; } 
+ul, ol { list-style:none; } 
+a{text-decoration:none; } 
+/*a:hover { text-decoration:underline; } */
+sup { vertical-align:text-top; } 
+sub{ vertical-align:text-bottom; } 
+legend { color:#000; } 
+fieldset, img { border:0; } 
+button, input, select, textarea { font-size:100%; } 
+table { border-collapse:collapse; border-spacing:0;} 
+
+.header{overflow: hidden;background: #fff;position: fixed;top: 0;left:0;z-index: 9999;width:100%;box-shadow: 0 10px 10px #000}
+#header>div{width:1200px;margin:0 auto;height:63px;background: #fff;}
+#header #logo{float:left;margin-top:12px;margin-left:10px;}
+#header #logo img{width:100px;margin-left:50px;}
+#header #nav{float:right;overflow: hidden;margin-top:20px;}
+#header #nav ul{overflow: hidden;margin-right:-1px;}
+#header #nav ul li{float:left;list-style: none;height:40px;line-height: 40px;}
+#header #nav ul li span{display:block;padding:0 30px;border-right:1px solid #ccc;height:20px;}
+#header #nav ul li a{color:#333;text-decoration:none;display: block;padding:0px 5px 10px 5px;line-height: 20px}
+#header #nav ul li a:hover{border-bottom: 3px solid #F67802;color:#F67802;}
+.active a{border-bottom: 3px solid #F67802;color:#F67802!important;}
+#content{overflow: hidden;width:100%;}
+#content .swiper-container{width:100%;}
+#content .swiper-container img{width:100%;}
+.case{overflow: hidden;margin-left:-0.3333%;margin-top:5px;clear:both;}
+.case div{width:33%;overflow: hidden;float: left;margin-left:0.3333%;color:#fff;text-align: center;position: relative;}
+.case div img{width:100%;}
+.info{font-size: 20px;display:inline-block;position: absolute;top:220px;margin-left:-40px;}
+.info a{color:#fff;text-decoration:none;}
+.title{font-size: 30px;text-align: center;width:100%;position: absolute;top:150px;}
+
+.munu{display: none}
+
+.swiper-pagination-bullet {width: 28px!important;border-radius: 0!important;}
+
+
+.news{width:1140px;margin:80px auto;background: #fff;color: #333;padding:30px;overflow: hidden;}
+.news h2{padding-bottom:30px;}
+.news h2 a{color: #F67802;font-size: 14px;text-decoration: none;display: inline-block;padding:0 30px;}
+.news ul{width:600px;overflow: hidden;float: left;}
+.news hr{border:0;background-color:#f8f8f8;height:1px;}
+.news li{list-style: none;overflow: hidden;}
+.news li:hover{background: #f8f8f8}
+.news li:hover .newsTime{background: #F67802;color:#fff;}
+.news li a{color: #333}
+.news li .newsTime{width:100px;height:100px;text-align: center;color:#333;float: left;}
+.news li .newsTime .newsTimeTitle{font-size: 50px;font-weight: 900;padding:10px 0;}
+.news li .newsShow{padding:10px;float: right;width:480px;}
+.news li .newsShowTitle{font-size: 18px;text-overflow:ellipsis;white-space: nowrap;overflow: hidden;line-height: 30px}
+.newsShowShow{font-size: 14px;line-height: 18px}
+.newsImg{float:right;width:520px;}
+.newsImg img{width:100%;height:400px;}
+
+.projectTitle{width:800px;margin: 0 auto;margin-top:80px;}
+.projectTitle img{width:800px;}
+.project{text-align: center;}
+.project li{float: left;position: relative;width:120px;height:45px;list-style: none;border:1px solid #ccc;text-align: center;line-height: 50px;margin-left: 45px;color:#333;cursor: pointer;background: #fff}
+.project li:hover{background: #F67802;color:#fff;}
+.project li:hover img{display: block;}
+.project ul{display:inline-block;padding:50px 0;margin-left: -30px}
+.project li img{position: absolute;width:30px;top:45px;left:45px;display: none}
+.projectInfo{overflow: hidden;position: relative;}
+.projectInfo img{width:100%;}
+.projectInfo a{display: inline-block;padding:15px 30px;border:2px solid #F67802;border-radius: 5px;color: #fff;position: absolute;bottom: 220px;text-decoration: none;margin-left:-50px;}
+.chouse{background: #F67802!important;color:#fff!important;}
+.chouse img{display: block!important;}
+.projectInfo2,.projectInfo3,.projectInfo4{display: none}
+
+#footer{overflow: hidden;background: #1E2023;padding:50px 0;}
+#footer p{text-align: center;color: #888;font-size: 14px;margin-top:40px;}
+.information{float: left;overflow: hidden;margin-left: 110px}
+.footerInfo{width:1200px;overflow: hidden;margin:0 auto;}
+.footerInfo h2{color:#fff;line-height: 60px;}
+.information ul{margin-left: -31px}
+.information li{float:left;list-style: none;padding:0 30px;border-left: 1px solid #888;}
+.information li a{text-decoration: none;color: #888;line-height: 30px}
+.information li a:hover{color: #F67802}
+
+.right{color:#888;margin-top:-50px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+    <meta content="青藤文学网手机版,用手机爱上阅读,纯净唯美文学网站,原创文学" name="keywords"/>
+    <meta content="青藤文学网是一个原创作品发布和阅读的平台,一个纯净唯美的原创文学网站,在这里让您用手机爱上阅读" name="description"/>
+    <meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0" name="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <link href="pic/logo.png" rel="apple-touch-icon"/>
+    <!--ping到ios桌面-->
+    <!--
+第一个meta标签表示：强制让文档的宽度与设备的宽度保持1:1，并且文档最大的宽度比例是1.0，且不允许用户点击屏幕放大浏览；
+第二个meta标签是iphone设备中的safari私有meta标签，它表示：允许全屏模式浏览；
+第三个meta标签也是iphone的私有标签，它指定的iphone中safari顶端的状态条的样式；
+第四个meta标签表示：告诉设备忽略将页面中的数字识别为电话号码
+-->
+    <title>
+        青藤文学手机wap小说网站模板首页
+    </title>
+    <link href="css.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <header class="top_bar">
+        <div class="topbar_list">
+            <a alt="青藤文学手机网" class="topbar_listbg" href="index.html" title="青藤文学手机网">
+                <img src="pic/home.gif" width="23"/>
+            </a>
+        </div>
+        <div class="topbar_logo">
+            <a class="logo">
+                <img src="pic/logo.gif" width="109"/>
+            </a>
+        </div>
+        <div class="topbar_bl">
+            <a alt="在线上传：文章、日记、记事、发帖" href="#" title="在线上传：文章、日记、记事、发帖">
+                <img src="pic/write.jpg" width="28"/>
+            </a>
+        </div>
+    </header>
+    <!--nav-->
+    <div class="navbox">
+        <nav class="nav site">
+            <div class="">
+                <a href="liebiao.html">
+                    推荐
+                </a>
+                <a href="liebiao.html">
+                    长篇
+                </a>
+                <a href="liebiao.html">
+                    日记
+                </a>
+                <a href="liebiao.html">
+                    小说
+                </a>
+                <a href="liebiao.html">
+                    散文
+                </a>
+                <a href="liebiao.html">
+                    诗歌
+                </a>
+                <a href="liebiao.html">
+                    诗词
+                </a>
+                <a href="liebiao.html">
+                    评论
+                </a>
+                <a href="liebiao.html">
+                    杂文
+                </a>
+                <a href="liebiao.html">
+                    校园
+                </a>
+                <a href="liebiao.html">
+                    儿童
+                </a>
+                <a href="liebiao.html">
+                    更多
+                </a>
+            </div>
+        </nav>
+    </div>
+    <!--pic box-->
+    <form action="User.asp?Action=ChkLogin" method="post" name="UserLogin" onsubmit="return CheckForm();">
+        <div style="text-align:left; padding-left:10px; background:#F5F5F5; border-top:2px solid #216BC0; border-bottom:0px solid #D4D4D4;height:38px; line-height:38px;font-size:16px">
+            笔名：
+            <input id="UserName" maxlength="6" name="UserName" style="width:70px;height:20px" type="text">
+                密码：
+                <input id="Password" maxlength="12" name="Password" style="width:70px;height:20px" type="password">
+                    <input id="Login" name="Login" style="width:45px;height:20px;" type="submit" value="登录">
+                    </input>
+                </input>
+            </input>
+        </div>
+    </form>
+    <script language="javascript">
+        function CheckForm()
+    {
+        if(document.UserLogin.UserName.value=="")
+        {
+            alert("请输入笔名！");
+            document.UserLogin.UserName.focus();
+            return false;
+        }
+        if(document.UserLogin.Password.value == "")
+        {
+            alert("忘了输密码，^_^");
+            document.UserLogin.Password.focus();
+            return false;
+        }
+    }
+    </script>
+    <!--幻灯片-->
+    <article>
+        <ul class="p_tabnav">
+            <!--代码-->
+            <div id="dropmrcsubject">
+            </div>
+            <div id="dropmsg0">
+                <a href="#" style="color:#f00;FONT-WEIGHT: bold;">
+                    2014年《青藤文集》火热征稿中…
+                </a>
+            </div>
+            <div id="dropmsg1">
+                <a href="#" style="color:#000;FONT-WEIGHT: bold;">
+                    欢迎加入青藤微信公众平台
+                </a>
+            </div>
+            <div id="dropmsg2">
+                <a href="#" style="color:#008000;FONT-WEIGHT: bold;">
+                    2013年青藤诗歌大赛作品选
+                </a>
+            </div>
+            <!--代码-->
+        </ul>
+    </article>
+    <!--幻灯片-->
+    <article>
+        <ul class="p_tabnav" id="j_guide">
+            <li class="active">
+                最新文章
+            </li>
+            <li>
+                推荐文章
+            </li>
+            <li>
+                最新评论
+            </li>
+        </ul>
+        <ul class="p_tabnum">
+            <li class="active">
+                1
+            </li>
+            <li>
+                2
+            </li>
+            <li>
+                3
+            </li>
+        </ul>
+        <div class="p_newstab" id="j_floor_1">
+            <div class="p_newsitem">
+                <div>
+                    <ul class="p_newslist">
+                        <!--最新文章-->
+                        <li>
+                            <a href="zhengwen.html">
+                                苦 果（小
+                            </a>
+                            <font color="#a3a3a3">
+                                (梦以成风)
+                            </font>
+                        </li>
+                        <li>
+                            <a href="zhengwen.html">
+                                蟋蟀（外一首）
+                            </a>
+                            <font color="#a3a3a3">
+                                (恩维)
+                            </font>
+                        </li>
+                        <li>
+                            <a href="zhengwen.html">
+                                采桑子・画荷（词林正
+                            </a>
+                            <font color="#a3a3a3">
+                                (闾凌宜人)
+                            </font>
+                        </li>
+                        <li>
+                            <a href="zhengwen.html">
+                                五绝・水说（联边诗）
+                            </a>
+                            <font color="#a3a3a3">
+                                (闾凌宜人)
+                            </font>
+                        </li>
+                        <li>
+                            <a href="zhengwen.html">
+                                七绝・可怜失常女
+                            </a>
+                            <font color="#a3a3a3">
+                                (江南少俊)
+                            </font>
+                        </li>
+                        <li>
+                            <a href="zhengwen.html">
+                                世间红竹当如是
+                            </a>
+                            <font color="#a3a3a3">
+                                (梅若林)
+                            </font>
+                        </li>
+                        <li>
+                            <a href="zhengwen.html">
+                                人间自有真情在
+                            </a>
+                            <font color="#a3a3a3">
+                                (火热的冰)
+                            </font>
+                        </li>
+                        <li>
+                            <a href="zhengwen.html">
+                                对秋的依恋
+                            </a>
+                            <font color="#a3a3a3">
+                                (羽裳青衫)
+                            </font>
+                        </li>
+                        <!--最新文章-->
+                    </ul>
+                </div>
+                <div class="hide">
+                    <ul class="p_newslist">
+                        <!--编辑推荐文章-->
+                        <li>
+                            <a href="zhengwen.html">
+                                锅贴包子
+                            </a>
+                            <font color="#a3a3a3">
+                                (渔樯)
+                            </font>
+                        </li>
+                        <li>
+                            <a href="zhengwen.html">
+                                鸟鸣如霜(组诗)
+                            </a>
+                            <font color="#a3a3a3">
+                                (无鱼清水)
+                            </font>
+                        </li>
+                        <li>
+                            <a href="zhengwen.html">
+                                一些之歌（1-17）
+                            </a>
+                            <font color="#a3a3a3">
+                                (轩辕轼轲)
+                            </font>
+                        </li>
+                        <li>
+                            <a href="zhengwen.html">
+                                神界之羚
+                            </a>
+                            <font color="#a3a3a3">
+                                (扎西才让)
+                            </font>
+                        </li>
+                        <li>
+                            <a href="zhengwen.html">
+                                大雪无痕
+                            </a>
+                            <font color="#a3a3a3">
+                                (阳都老幺)
+                            </font>
+                        </li>
+                        <li>
+                            <a href="zhengwen.html">
+                                狮子林奇趣
+                            </a>
+                            <font color="#a3a3a3">
+                                (真源)
+                            </font>
+                        </li>
+                        <li>
+                            <a href="zhengwen.html">
+                                在那遥远的地方：大美青海
+                            </a>
+                            <font color="#a3a3a3">
+                                (月边闲云)
+                            </font>
+                        </li>
+                        <li>
+                            <a href="zhengwen.html">
+                                【诗歌大赛】天就黑了（外二首）
+                            </a>
+                            <font color="#a3a3a3">
+                                (韩永忠)
+                            </font>
+                        </li>
+                        <!--编辑推荐文章-->
+                    </ul>
+                </div>
+                <div class="hide">
+                    <ul class="p_newslist">
+                        <!--最新文章评论-->
+                        <li>
+                            <a href="zhengwen.html">
+                                评:苦 果
+                                <font color="#8a8a8a">
+                                    (小名叫咏梅)
+                                </font>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="zhengwen.html">
+                                晴天娃娃之梦&nbs;
+                                <font color="#8a8a8a">
+                                    (水温柔)
+                                </font>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="zhengwen.html">
+                                卞卞街系列成话:荷包
+                                <font color="#8a8a8a">
+                                    (水温柔)
+                                </font>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="zhengwen.html">
+                                苦 果（小
+                                <font color="#8a8a8a">
+                                    (水温柔)
+                                </font>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="zhengwen.html">
+                                评:第一首诗
+                                <font color="#8a8a8a">
+                                    (晏溪)
+                                </font>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="zhengwen.html">
+                                评:妈妈
+                                <font color="#8a8a8a">
+                                    (晏溪)
+                                </font>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="zhengwen.html">
+                                艺圃雅居
+                                <font color="#8a8a8a">
+                                    (兰琪儿)
+                                </font>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="zhengwen.html">
+                                评:【诗歌大赛】秋，
+                                <font color="#8a8a8a">
+                                    (腊梅)
+                                </font>
+                            </a>
+                        </li>
+                        <!--最新文章评论-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article>
+        <ul class="p_tabnav" id="j_guide">
+            <li class="active">
+                短篇小说
+            </li>
+        </ul>
+    </article>
+</body>
+    <div style="text-align:right;font-size:15px">
+        <a href="#">
+            更多..
+        </a>
+    </div>
+    <ul class="p_newslist">
+        <li>
+            <a href="zhengwen.html">
+                苦 果（小小说）
+                <font color="#ff0000" size="1">
+                    新
+                </font>
+                <font color="#c0c0c0" size="2">
+                    (62/2，梦以成风)
+                </font>
+            </a>
+        </li>
+        <li>
+            <a href="zhengwen.html">
+                锅贴包子
+                <font color="#c0c0c0" size="2">
+                    (190/2，渔樯)
+                </font>
+            </a>
+        </li>
+        <li>
+            <a href="zhengwen.html">
+                电话（小小说）
+                <font color="#c0c0c0" size="2">
+                    (295/3，梦以成风)
+                </font>
+            </a>
+        </li>
+        <li>
+            <a href="zhengwen.html">
+                老丁（小小说）
+                <font color="#c0c0c0" size="2">
+                    (469/4，梦以成风)
+                </font>
+            </a>
+        </li>
+        <li>
+            <a href="zhengwen.html">
+                【闪小说】主任笑了
+                <font color="#c0c0c0" size="2">
+                    (265/2，梦以成风)
+                </font>
+            </a>
+        </li>
+        <li>
+            <a href="zhengwen.html">
+                乞丐日记（四则）
+                <font color="#c0c0c0" size="2">
+                    (186/2，岱青)
+                </font>
+            </a>
+        </li>
+    </ul>
+    <ul class="p_tabnav" id="j_guide">
+        <li class="active">
+            散文随笔
+        </li>
+    </ul>
+    <div style="text-align:right;font-size:15px">
+        <a href="7cd_Class.asp@ClassID=58">
+            更多..
+        </a>
+    </div>
+    <ul class="p_newslist">
+        <li>
+            <a href="read.asp@articleid=70292">
+                人间自有真情在
+                <font color="#c0c0c0" size="2">
+                    (83/0，火热的冰)
+                </font>
+            </a>
+        </li>
+        <li>
+            <a href="read.asp@articleid=70219">
+                相聚兰州城
+                <font color="#c0c0c0" size="2">
+                    (104/2，漫步山峦)
+                </font>
+            </a>
+        </li>
+        <li>
+            <a href="read.asp@articleid=70235">
+                艺圃雅居
+                <font color="#ff0000" size="1">
+                    新
+                </font>
+                <font color="#c0c0c0" size="2">
+                    (59/1，真源)
+                </font>
+            </a>
+        </li>
+        <li>
+            <a href="read.asp@articleid=70190">
+                秋日，那一轮夕阳
+                <font color="#c0c0c0" size="2">
+                    (94/1，晨明文化2)
+                </font>
+            </a>
+        </li>
+        <li>
+            <a href="read.asp@articleid=70154">
+                和嫂子睡觉那年俺十二岁
+                <font color="#c0c0c0" size="2">
+                    (185/1，王立进)
+                </font>
+            </a>
+        </li>
+        <li>
+            <a href="read.asp@articleid=70149">
+                死马当活马医
+                <font color="#c0c0c0" size="2">
+                    (59/1，带雨的云)
+                </font>
+            </a>
+        </li>
+    </ul>
+    <ul class="p_tabnav" id="j_guide">
+        <li class="active">
+            现代诗歌
+        </li>
+    </ul>
+    <div style="text-align:right;font-size:15px">
+        <a href="7cd_Class.asp@ClassID=76">
+            更多..
+        </a>
+    </div>
+    <ul class="p_newslist">
+        <li>
+            <a href="read.asp@articleid=70320">
+                蟋蟀（外一首）
+                <font color="#c0c0c0" size="2">
+                    (80/0，恩维)
+                </font>
+            </a>
+        </li>
+        <li>
+            <a href="read.asp@articleid=70291">
+                对秋的依恋
+                <font color="#c0c0c0" size="2">
+                    (78/1，羽裳青衫)
+                </font>
+            </a>
+        </li>
+        <li>
+            <a href="read.asp@articleid=70270">
+                【诗歌大赛】沂河渔者
+                <font color="#c0c0c0" size="2">
+                    (135/1，岱青)
+                </font>
+            </a>
+        </li>
+        <li>
+            <a href="read.asp@articleid=70220">
+                画里话外
+                <font color="#c0c0c0" size="2">
+                    (93/1，江南丰盈)
+                </font>
+            </a>
+        </li>
+        <li>
+            <a href="read.asp@articleid=70258">
+                说江南
+                <font color="#c0c0c0" size="2">
+                    (121/1，梅若林)
+                </font>
+            </a>
+        </li>
+        <li>
+            <a href="read.asp@articleid=70216">
+                【诗歌大赛】吻（组诗）
+                <font color="#c0c0c0" size="2">
+                    (91/1，星空下的蟾)
+                </font>
+            </a>
+        </li>
+    </ul>
+    <ul class="p_tabnav" id="j_guide">
+        <li class="active">
+            诗词曲赋
+        </li>
+    </ul>
+    <div style="text-align:right;font-size:15px">
+        <a href="7cd_Class.asp@ClassID=77">
+            更多..
+        </a>
+    </div>
+    <ul class="p_newslist">
+        <li>
+            <a href="read.asp@articleid=70306">
+                采桑子・画荷（词林正韵）..
+                <font color="#c0c0c0" size="2">
+                    (104/1，闾凌宜人)
+                </font>
+            </a>
+        </li>
+        <li>
+            <a href="read.asp@articleid=70305">
+                五绝・水说（联边诗）
+                <font color="#c0c0c0" size="2">
+                    (86/1，闾凌宜人)
+                </font>
+            </a>
+        </li>
+        <li>
+            <a href="read.asp@articleid=70302">
+                七绝・可怜失常女
+                <font color="#c0c0c0" size="2">
+                    (89/1，江南少俊)
+                </font>
+            </a>
+        </li>
+        <li>
+            <a href="read.asp@articleid=70300">
+                世间红竹当如是
+                <font color="#c0c0c0" size="2">
+                    (101/3，梅若林)
+                </font>
+            </a>
+        </li>
+        <li>
+            <a href="read.asp@articleid=70289">
+                泪垂忆隐
+                <font color="#c0c0c0" size="2">
+                    (93/1，琉璃梦)
+                </font>
+            </a>
+        </li>
+        <li>
+            <a href="read.asp@articleid=70278">
+                西河•宜居临沂
+                <font color="#c0c0c0" size="2">
+                    (86/1，禾子)
+                </font>
+            </a>
+        </li>
+    </ul>
+    <ul class="p_tabnav" id="j_guide">
+        <li class="active">
+            视读评论
+        </li>
+    </ul>
+    <div style="text-align:right;font-size:15px">
+        <a href="7cd_Class.asp@ClassID=60">
+            更多..
+        </a>
+    </div>
+    <ul class="p_newslist">
+        <li>
+            <a href="read.asp@articleid=70109">
+                观《暗恋桃花源》有感
+                <font color="#c0c0c0" size="2">
+                    (93/1，晴空潋雪)
+                </font>
+            </a>
+        </li>
+        <li>
+            <a href="read.asp@articleid=69885">
+                经典的诠释
+                <font color="#c0c0c0" size="2">
+                    (369/2，戴建华)
+                </font>
+            </a>
+        </li>
+        <li>
+            <a href="read.asp@articleid=69626">
+                用心和脚丈量文明的距离
+                <font color="#c0c0c0" size="2">
+                    (883/2，寸木岑楼)
+                </font>
+            </a>
+        </li>
+        <li>
+            <a href="read.asp@articleid=69560">
+                灵魂的自由翱翔于海――赏..
+                <font color="#c0c0c0" size="2">
+                    (196/1，花虫)
+                </font>
+            </a>
+        </li>
+        <li>
+            <a href="read.asp@articleid=69367">
+                浅谈爱情诗的审美特点
+                <font color="#c0c0c0" size="2">
+                    (280/3，刘克法)
+                </font>
+            </a>
+        </li>
+        <li>
+            <a href="read.asp@articleid=69460">
+                人间正道是沧桑――论“新..
+                <font color="#c0c0c0" size="2">
+                    (280/2，雁阵)
+                </font>
+            </a>
+        </li>
+    </ul>
+    <div class="footer">
+        <a href="index.html">
+            青藤首页
+        </a>
+        <a href="about.asp">
+            关于我们
+        </a>
+        <a href="about.asp@Action=2">
+            联系方式
+        </a>
+        <a href="classmap.asp">
+            栏目导航
+        </a>
+    </div>
+    <div class="end">
+        <p>
+            <a href="#">
+                电脑版
+            </a>
+            <em>
+                |
+            </em>
+            <a href="index.html">
+                手机版
+            </a>
+            <em>
+                |
+            </em>
+            <a href="#">
+                返回顶部
+            </a>
+        </p>
+    </div>
+    <script src="pic/zepto.js">
+    </script>
+    <script src="pic/home.min.js">
+    </script>
+    <script src="pic/swipe.min.js">
+    </script>
+    <script src="pic/autotxt.js">
+    </script>
+</html>

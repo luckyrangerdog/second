@@ -3,59 +3,1111 @@
 <head>
 	<meta charset="UTF-8">
 	<title>qq音乐</title>
-	<style type="text/css" media="screen">
-		.fl {float: left;}
-		.fr {float: right;}
-		body,ol,ul,li,img,a,span,p,input {margin: 0;padding: 0}
-		input {border:none;}
-		button {background: none;}
-
-		#header {height: 142px;background: #fff;}
-		.first-nav {height: 90px;width: 1200px;margin: 0 auto;border-bottom: 1px solid #f2f2f2;}
-		.logo {padding-top: 19px;margin-right: 34px;}
-		.page-nav li {float: left;list-style: none;}
-		.page-nav li a {display: block; color: #333;font-family: "苹方";font-size: 18px; text-decoration: none;line-height: 90px;padding: 0 20px;}
-		.page-nav .active {background: #31c27c;color: #fff;}
-		.search {border:1px solid #c9c9c9;border-radius: 2px;padding: 10px 32px 13px 15px;width: 202px;color: #919191;margin: 26px 22px 0 30px;}
-
-		
-	</style>
+	<link rel="stylesheet" href="css/main.css" type="text/css">
+	<script src="js/jquery.js"></script>
+	<script src="js/main.js"></script>
 </head>
 <body>
+	<!-- 导航部分 -->
 	<div id="header">
-		<div class="first-nav">
-			<img class="logo fl" src="img/logo.png" height="52" width="190" alt="" >
-			<ul class="page-nav fl">
-				<li><a class="active" href="">音乐馆</a></li>
-				<li><a href="">我的音乐</a></li>
-				<li><a href="">下载客户端</a></li>
-				<li><a href="">VIP</a></li>
+		<div class="first_nav">
+			<img class="logo fl" src="img/logo.png" height="52" width="190" alt="">
+			<ul class="page_nav">
+				<li><a class="active" href="#">音乐厅</a></li>
+				<li><a  href="#">我的音乐</a></li>
+				<li><a  href="#">下载客户端</a></li>
+				<li><a  href="#">VIP</a></li>
 			</ul>
-			<div class="button-wrap">
+			<div class="button_wrap fl">
 				<input class="search" type="text" name="" value="金曲捞" placeholder="">
-				<button type="button"><img src="" alt=""></button>
+				<button type="button"><img src="img/search.svg" alt=""></button>
 			</div>
-				<input type="button" name="" value="登录" >
-				<input type="button" name="" value="开通绿钻豪华版" placeholder="">
-				<input type="button" name="" value="开通付费包" placeholder="">
-				
-			
+			<div class="sign_in fl">
+				<input class="sign_in1" type="button" name="" value="登录" >
+				<input class="sign_in2" type="button" name="" value="开通绿钻豪华版" placeholder="">
+				<input class="sign_in3" type="button" name="" value="开通付费包" placeholder="">
+			</div>
 		</div>
-		<div class="secont-nav">
+		<div class="second_nav">
 			<ul>
-				<li>首页</li>
-				<li>歌手</li>
-				<li>专辑</li>
-				<li>排行榜</li>
-				<li>分类歌单</li>
-				<li>MV</li>
+				<li><a class="active" href="">首页</a></li>
+				<li><a href="">歌手</a></li>
+				<li><a href="">专辑</a></li>
+				<li><a href="">排行榜</a></li>
+				<li><a href="">分类歌单</a></li>
+				<li><a href="">MV</a></li>
 			</ul>
 		</div>
 	</div>
-	<div id="newSing"></div>
-	<div id="recommend"></div>
-	<div id="rank"></div>
-	<div id="hot"></div>
+
+
+	<!-- 新歌首发 -->
+	<div id="newSing">
+		<div class="pre"><img src="img/previous.svg" alt=""></div>
+		<div class="main">
+			<h1>新歌首发</h1>
+			<ul class="place">
+				<li><a class="active" href="#">内地</a></li>
+				<li><a href="#">港台</a></li>
+				<li><a href="#">欧美</a></li>
+				<li><a href="#">韩国</a></li>
+				<li><a href="#">日本</a></li>
+			</ul>
+			<a class="all" href="">全部&gt;</a>
+			<div class="main_bannerwrap">
+				<ul class="main_banner">
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+				</ul>
+				<ul class="main_banner">
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+				</ul>
+				<ul class="main_banner">
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+				</ul>
+				<ul class="main_banner">
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+				</ul>
+				<ul class="main_banner">
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="nav-dot">
+				<a class="active" href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+			</div>
+		</div>
+
+
+		<div class="next"><img src="img/next.svg" alt=""></div>
+	</div>
+	<!-- 精彩推荐 -->
+	<div id="recommend">
+		<div class="pre"><img src="img/previous.svg" alt=""></div>
+		<h1>精彩推荐</h1>
+		<div class="recommend_wrap">
+			<ul class="recommend_main">
+				<li class="top"><a href="javascript:;"><img src="img/recommend1.jpg" alt=""></a></li>
+				<li class="left"><a href="javascript:;"><img src="img/recommend2.jpg" alt=""></a></li>
+				<li class="right"><a href="javascript:;"><img src="img/recommend3.jpg" alt=""></a></li>
+				<li><a href="javascript:;"><img src="img/recommend4.jpg" alt=""></a></li>
+				<li><a href="javascript:;"><img src="img/recommend5.jpg" alt=""></a></li>
+				<li><a href="javascript:;"><img src="img/recommend6.jpg" alt=""></a></li>
+			</ul>
+		</div>
+		<div class="nav-dot">
+			<a class="active" href="javascript:;"></a>
+			<a href="javascript:;"></a>
+			<a href="javascript:;"></a>
+			<a href="javascript:;"></a>
+			<a href="javascript:;"></a>
+			<a href="javascript:;"></a>
+		</div>
+		<div class="next"><img src="img/next.svg" alt=""></div>
+	</div>
+
+
+	<!-- 排行榜 -->
+	<div id="rank">
+		<div class="rank_wrap">
+			<h1>排行榜</h1>
+			<a class="more" href="#">全部&gt;</a>
+			<div class="rank_main">
+				<ul class="rank_ul">
+					<li class="rank1">
+						<div class="listbg"></div>
+						<i class="mask"></i>
+						<i class="play"></i>
+						<h2>巅峰榜<br /><span>流行指数</span></h2>
+						<ul>
+							<li><a href="#">1 追光者<br /><span>岑宁儿</span></a></li>
+							<li><a href="#">1 As If It's Your Last<br /><span>BLACKPINK</span></a></li>
+							<li><a href="#">1 等我回家<br /><span>薛之谦/王栎鑫</span></a></li>
+							<li><a href="#">1 我想念<br /><span>金志文</span></a></li>
+						</ul>
+					</li>
+					<li class="rank2">
+						<div class="listbg"></div>
+						<i class="mask"></i>
+						<i class="play"></i>
+						<h2>巅峰榜<br /><span>热歌</span></h2>
+						<ul>
+							<li><a href="#">1 追光者<br /><span>岑宁儿</span></a></li>
+							<li><a href="#">1 As If It's Your Last<br /><span>BLACKPINK</span></a></li>
+							<li><a href="#">1 等我回家<br /><span>薛之谦/王栎鑫</span></a></li>
+							<li><a href="#">1 我想念<br /><span>金志文</span></a></li>
+						</ul>
+					</li>
+					<li class="rank3">
+						<div class="listbg"></div>
+						<i class="mask"></i>
+						<i class="play"></i>
+						<h2>巅峰榜<br /><span>新歌</span></h2>
+						<ul>
+							<li><a href="#">1 追光者<br /><span>岑宁儿</span></a></li>
+							<li><a href="#">1 As If It's Your Last<br /><span>BLACKPINK</span></a></li>
+							<li><a href="#">1 等我回家<br /><span>薛之谦/王栎鑫</span></a></li>
+							<li><a href="#">1 我想念<br /><span>金志文</span></a></li>
+						</ul>
+					</li>
+					<li class="rank4">
+						<div class="listbg"></div>
+						<i class="mask"></i>
+						<i class="play"></i>
+						<h2>巅峰榜<br /><span>欧美</span></h2>
+						<ul>
+							<li><a href="#">1 追光者<br /><span>岑宁儿</span></a></li>
+							<li><a href="#">1 As If It's Your Last<br /><span>BLACKPINK</span></a></li>
+							<li><a href="#">1 等我回家<br /><span>薛之谦/王栎鑫</span></a></li>
+							<li><a href="#">1 我想念<br /><span>金志文</span></a></li>
+						</ul>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+
+	</div>
+
+	<!-- 热门歌单 -->
+	<div id="hot">
+		<div class="pre"><img src="img/previous.svg" alt=""></div>
+		<div class="main">
+			<h1>热门歌单</h1>
+			<div class="main_bannerwrap">
+				<ul class="main_banner">
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img src="img/new1.jpg" alt="">
+							<div class="cover"></div>
+							<div class="play_icon"></div>
+						</div>
+						<div class="info">
+							<p>Torches</p>
+							<p>张杰</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="nav-dot">
+				<a class="active" href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+			</div>
+		</div>
+
+
+		<div class="next"><img src="img/next.svg" alt=""></div>
+	</div>
 	<div id="newMV"></div>
 	<div id="footer"></div>
 </body>

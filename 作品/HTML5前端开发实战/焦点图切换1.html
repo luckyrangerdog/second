@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>焦点图切换</title>
+	<style type="text/css" >
+		*{margin: 0;padding: 0}
+		img {border:none;vertical-align: top;}
+		#box {width: 500px;height: 240px;margin: 100px auto;position: relative;overflow: hidden;}
+		#box ul {width: 500px;height: 240px;position: absolute;left: 0;top: 0;}
+		#box ul li {width: 500px;height: 240px;}
+		#box ol {position: absolute;left: 190px;bottom: 10px;}
+		#box ol li {float: left;width: 20px;height: 20px;background: blue;list-style: none;background: #fff;text-align: center;margin:0 4px;color: #f60;cursor: pointer;}
+		#box ol .active {background: #f60;color: #fff;}
+	</style>
+	<script src="js/move2.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script  type="text/javascript" charset="utf-8" async defer>
+	window.onload=function(){
+		var oBox=document.getElementById('box');
+		var oUl=document.getElementsByTagName('ul')[0];
+		var aLiUl=oUl.getElementsByTagName('li');
+
+		var oOl=document.getElementsByTagName('ol')[0];
+		var aLiOl=oOl.getElementsByTagName('li');
+
+		var iHeight=aLiUl[0].offsetHeight;
+
+		var timer=null;
+		var iNow=0;
+		var iNow2=0;
+
+		console.log(iHeight)
+
+		for (var i = 0; i < aLiOl.length; i++) {
+			aLiOl[i].index=i;
+			aLiOl[i].onmouseover=function(){
+				for (var i = 0; i < aLiOl.length; i++) {
+					aLiOl[i].className='';
+				};
+				this.className="active";
+
+				iNow=this.index;
+				iNow2=this.index;
+
+				startMove(oUl,{top:-this.index*iHeight})
+			}
+		};
+		clearInterval(timer);
+		timer=setInterval(toRun,1000);
+		function toRun(){
+			if( iNow==0 ){
+				aLiUl[0].style.position='static';
+				oUl.style.top=0;
+				iNow2=0;
+			}
+			if(iNow ==aLiOl.length-1){
+				iNow=0;
+				aLiUl[0].style.position='relative';
+				aLiUl[0].style.top=aLiUl.length*iHeight+'px';
+			}
+			else{
+				iNow++;
+			}
+
+			iNow2++;
+
+			for (var i = 0; i < aLiOl.length; i++) {
+				aLiOl[i].className='';
+			};
+			aLiOl[iNow].className='active';
+			startMove(oUl,{top:-iNow2*iHeight});
+		}
+		oBox.onmouseover=function(){
+			clearInterval(timer);
+		}
+		oBox.onmouseout=function(){
+			timer=setInterval(toRun,1000);
+		}
+	}
+	</script>
+</head>
+
+<body>
+	<div id="box">
+		<ul>
+			<li><img src="img/banner1.jpg" alt=""></li>
+			<li><img src="img/banner2.jpg" alt=""></li>
+			<li><img src="img/banner3.jpg" alt=""></li>
+			<li><img src="img/banner4.jpg" alt=""></li>
+			<li><img src="img/banner5.jpg" alt=""></li>
+		</ul>
+		<ol>
+			<li class="active">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ol>
+		
+	</div>
+	
+</body>
+</html>

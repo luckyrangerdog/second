@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+	<title>华迪--APP下载</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="apple-wap-web-app-capable" content="yes">
+    <meta name="apple-wap-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" type="text/css" href="./css/public.css">
+    <link rel="stylesheet" type="text/css" href="./css/experience.css">
+    <link rel="stylesheet" type="text/css" href="./css/app.css">
+    <link rel="stylesheet" type="text/css" href="./css/media.css">
+    <link rel="stylesheet" type="text/css" href="./css/swiper-3.4.1.min.css">
+    <script type="text/javascript" src="./js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="./js/rem.js"></script>
+</head>
+<body>
+	<div id="header" style="overflow: hidden;background: #fff;position: fixed;top: 0;left:0;z-index: 9999;width:100%;box-shadow: 0 3px 10px #ccc">
+		<div>
+			<div id="logo">
+				<img src="./images/huadi.png">
+			</div>
+			<div id="nav">
+				<ul>
+					<li><span><a href="">首页</a></span></li>
+					<li><span><a href="">智能体验</a></span></li>
+					<li><span><a href="">产品</a></span></li>
+					<li><span><a href="">解决方案</a></span></li>
+					<li><span><a href="">用户与案例</a></span></li>
+					<li><span><a href="">渠道合作</a></span></li>
+					<li><span><a href="">技术支持</a></span></li>
+					<li><span><a href="">华迪动态</a></span></li>
+				</ul>
+			</div>
+			<div class="munu" data-munu="1">
+				<img src="./images/menu.png">
+			</div>
+		</div>
+	</div>
+	<div id="content">
+	    <div class="swiper-container">
+		    <div class="swiper-wrapper" style="margin-top:60px">
+		    	<div class="swiper-slide  xiazai">
+		        	<img src="./images/app1.png">
+	        		<ul>
+	        			<li><a href=""><img src="./images/appbtn.png"></a></li>
+	        			<li><a href=""><img src="./images/appbtn2.png"></a></li>
+	        		</ul>
+		        </div>
+		        <div class="swiper-slide"><img src="./images/app2.png" class="img"></div>
+		        <div class="swiper-slide"><img src="./images/app3.png"></div>
+		        <div class="swiper-slide"><img src="./images/app4.png"></div>
+		    </div>
+		    <div class="swiper-pagination"></div>
+      	</div>
+      	<!-- 移动端 -->
+      	<div class="swiper-wrapper1">
+	    	<div class="swiper-slide xiazai">
+	        	<img src="./images/app1.png">
+        		<ul>
+        			<li><a href=""><img src="./images/appbtn.png"></a></li>
+        			<li><a href=""><img src="./images/appbtn2.png"></a></li>
+        		</ul>
+	        </div>
+	        <div class="swiper-slide"><img src="./images/app2.png" class="img"></div>
+	        <div class="swiper-slide"><img src="./images/app3.png"></div>
+	        <div class="swiper-slide"><img src="./images/app4.png"></div>
+        </div>
+	</div>
+	
+	<div id="footer">
+		<div class="footerInfo">
+			<div class="information">
+				<h2>企业信息</h2>
+				<ul>
+					<li><a href="">公司简介</a></li>
+					<li><a href="">公司动态</a></li>
+					<li><a href="">联系我们</a></li>
+				</ul>
+			</div>
+			<div class="information">
+				<h2>快速购买</h2>
+				<ul>
+					<li><a href="">京东</a></li>
+					<li><a href="">天猫</a></li>
+				</ul>
+			</div>
+			<div class="information">
+				<h2>APP下载</h2>
+				<ul>
+					<li><a href="">甜园智能</a></li>
+					<li><a href="">IOS</a></li>
+					<li><a href="">安卓</a></li>
+				</ul>
+			</div>
+		</div>
+		<p>北京市华迪世通物联科技有限公司版权所有</p>
+	</div>	
+	<script type="text/javascript">
+		$('.munu').click(function(){
+			var munu = $('.munu').attr('data-munu');
+			if(munu == 1){
+				$('#nav').slideDown();
+				// $('#nav').css({display:'block'});
+				$('.munu').attr('data-munu','2');
+			}else{
+				$('#nav').slideUp();
+				// $('#nav').css({display:'none'});
+				$('.munu').attr('data-munu','1');
+			}	
+		})
+	</script>
+    <script type="text/javascript" src="./js/swiper-3.4.1.jquery.min.js"></script>
+	<script type="text/javascript">
+		var $height = $('.img').height();
+		$('.swiper-container').height($height);
+		var mySwiper = new Swiper('.swiper-container',{
+			direction : 'vertical',
+			pagination: '.swiper-pagination',
+			slidesPerView: 'auto',
+			autoplay : 3000,
+			mousewheelControl : true,
+		})
+	</script>	
+</body>
+</html>
